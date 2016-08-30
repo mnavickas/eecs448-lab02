@@ -38,10 +38,16 @@ bool LinkedList<T>::search(T value) const
 {
 	Node<T>* temp = m_front;
 	bool isFound = false;
+	
+	while(temp != nullptr && !isFound)
+	{
+		if(temp->getValue() == value)
+		{
+			isFound = true;
+		}
+		temp = temp->getNext();
+	}
 
-	/** TODO 
-		Fix this method
-	*/
 
 	return(isFound);
 }
@@ -101,9 +107,6 @@ bool LinkedList<T>::removeBack()
 	Node<T>* secondintoLast = nullptr;
 	bool isRemoved = false;
 
-	/** TODO 
-		Fix this method
-	*/
 
 	return(isRemoved);
 }	
